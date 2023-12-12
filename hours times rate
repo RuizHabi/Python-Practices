@@ -1,9 +1,13 @@
 hrs = input("Enter Hours: ")
 rate = input("Enter Rate: ")
+try: 
 #Float is a function or code converts values into floating point numbers. 
-fh = float(hrs)
-#fr is floating rate
-fr = float(rate)
+    fh = float(hrs)
+    fr = float(rate) #fr is floating rate
+except:
+    print("Error, please enter numeric input")
+    quit() #it ends reading the data 
+    
 if fh > 40 :
     print("Overtime included")
     reg = fr * fh
