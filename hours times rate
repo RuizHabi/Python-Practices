@@ -1,4 +1,16 @@
 hrs = input("Enter Hours: ")
 rate = input("Enter Rate: ")
-salary = float(hrs) * float(rate)
-print("Pay:",salary)
+#Float is a function or code converts values into floating point numbers. 
+fh = float(hrs)
+#fr is floating rate
+fr = float(rate)
+if fh > 40 :
+    print("Overtime included")
+    reg = fr * fh
+    otp = (fh - 40.0) * (fr * 0.5)
+    #print(reg,otp)
+    pay = reg + otp
+else:
+    print("Regular")
+    pay = fh * fr
+print("Pay:",pay)
